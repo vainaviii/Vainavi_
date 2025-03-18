@@ -23,18 +23,23 @@ body {
   }
 
   .logo{
-    width: 100px;
-    height: 150px;
+    width: 90px;
+    height: 70px;
   }
 
-  .navbar .search-bar button {
-    padding: 2px 7px;
+  .navbar .search-bar {
+    padding: 5px 10px;
     font-size: 16px;
     border: none;
-    background-color: yellow;
     color: black;
     margin-left: 5px;
     border-radius: 3px
+  }
+
+  .navbar .search-bar button{
+    border: none;
+    background-color: yellow;
+    padding: 2px 7px;
   }
 
 .navbar a{
@@ -54,4 +59,100 @@ body {
 
 .navbar .menu2 a{
   padding: 5px 10px;
+}
+
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .cta-button {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.featured-events {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.featured-events h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.event-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  }
+
+.event-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.event-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a {
+  color: yellow;
+  text-decoration: none;
 }
