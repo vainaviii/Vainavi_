@@ -1,25 +1,24 @@
-:root {
-    --vista-blue: #8692E9;
-    --space-cadet: #1A1A47;
-    --isabelline: #F7F1EC;
-    --french-gray: #C8BDC2;
-    --space-cadet-2: #2E2651;
-    --palatinate: #662163;
-    --brilliant-rose: #E855B4;
-}
+/* color codes:
+Vista Blue: #8692E9
+Space Cadet: #1A1A47
+Isabelline: #F7F1EC
+Space Cadet 2: #2E2651
+Palatinate: #662163
+Brilliant Rose: #E855B4 */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: var(--isabelline);
-    color: var(--space-cadet);
+    background-color: #F7F1EC;
+    color: #1A1A47;
 }
 
 h1, h2, h3 {
     font-family: Arial, sans-serif;
     font-weight: bold;
-    color: var(--space-cadet);
+    color: #1A1A47;
 }
 
 a {
@@ -27,11 +26,12 @@ a {
     color: inherit;
 }
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--space-cadet);
+    background: #1A1A47;
     padding: 15px 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -44,7 +44,7 @@ a {
 .navbar .search-bar {
     display: flex;
     align-items: center;
-    background: var(--isabelline);
+    background: #F7F1EC;
     border-radius: 25px;
     padding: 5px 15px;
 }
@@ -62,25 +62,25 @@ a {
     background: none;
     cursor: pointer;
     font-size: 18px;
-    color: var(--space-cadet);
+    color: #1A1A47;
 }
 
 .navbar .menu a {
     margin: 0 15px;
-    color: var(--isabelline);
+    color: #F7F1EC;
     font-weight: 600;
 }
 
 .navbar .menu2 {
     display: flex;
-    background: var(--vista-blue);
+    background: #8692E9;
     border-radius: 25px;
     padding: 5px 15px;
 }
 
 .navbar .menu2 a {
     margin: 0 10px;
-    color: var(--isabelline);
+    color: #F7F1EC;
     font-weight: 600;
 }
 
@@ -91,19 +91,9 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--isabelline);
+    color: #F7F1EC;
     overflow: hidden;
     background: url('backdrop.jpg') no-repeat center center/cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ;
-    z-index: 1;
 }
 
 .hero-content {
@@ -122,25 +112,28 @@ a {
 }
 
 .hero .cta-button {
-    background: var(--brilliant-rose);
-    color: var(--isabelline);
+    background: #E855B4;
+    color: #F7F1EC;
     padding: 10px 25px;
     border-radius: 25px;
     font-size: 1rem;
     transition: background 0.3s ease;
 }
 
+.hero .cta-button:hover {
+    background: #662163;
+}
 
 .featured-events {
     padding: 50px 20px;
     text-align: center;
-    background-color: var(--isabelline);
+    background-color: #F7F1EC;
 }
 
 .featured-events h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: var(--space-cadet);
+    color: #1A1A47;
 }
 
 .event-list {
@@ -151,7 +144,7 @@ a {
 }
 
 .event-card {
-    background: var(--isabelline);
+    background: #F7F1EC;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -167,32 +160,153 @@ a {
 .event-card h3 {
     font-size: 1.5rem;
     margin: 15px 0 10px;
-    color: var(--space-cadet);
+    color: #1A1A47;
 }
 
 .event-card p {
     font-size: 0.9rem;
     margin: 5px 15px;
-    color: var(--space-cadet-2);
+    color: #2E2651;
 }
 
 .event-card .event-button {
     display: inline-block;
-    background: var(--vista-blue);
-    color: var(--isabelline);
+    background: #8692E9;
+    color: #F7F1EC;
     padding: 8px 20px;
     border-radius: 20px;
     margin: 15px;
+    transition: background 0.3s ease;
+}
+
+.event-card .event-button:hover {
+    background: #662163;
 }
 
 .footer {
-    background: var(--space-cadet);
-    color: var(--isabelline);
+    background: #1A1A47;
+    color: #F7F1EC;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
 }
 
 .footer a {
-    color: var(--brilliant-rose);
+    color: #E855B4;
+}
+
+/* About Page Styles */
+.about-hero {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F7F1EC;
+    overflow: hidden;
+    background: url('about-hero-bg.jpg') no-repeat center center/cover;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+}
+
+.mission-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F7F1EC;
+}
+
+.mission-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1A1A47;
+}
+
+.mission-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #2E2651;
+}
+
+.mission-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mission-stats .stat {
+    background: #F7F1EC;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-stats .stat h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1A1A47;
+}
+
+.mission-stats .stat p {
+    font-size: 0.9rem;
+    color: #2E2651;
+}
+
+.team-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F7F1EC;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1A1A47;
+}
+
+.team-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #2E2651;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background: #F7F1EC;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1A1A47;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #2E2651;
 }
