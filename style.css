@@ -196,117 +196,225 @@ a {
 }
 
 /* About Page Styles */
+/* About Page Enhancements */
 .about-hero {
-    position: relative;
-    height: 300px;
+    height: 60vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    background: linear-gradient(rgba(26, 26, 71, 0.9), rgba(46, 38, 81, 0.9)),
+                url('about-bg.jpg') center/cover;
     color: #F7F1EC;
-    overflow: hidden;
-    background: url('about-hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 2rem;
 }
 
-.about-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.about-hero p {
-    font-size: 1.2rem;
+.hero-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    color: #E855B4;
 }
 
 .mission-section {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #F7F1EC;
-}
-
-.mission-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #1A1A47;
-}
-
-.mission-section p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #2E2651;
-}
-
-.mission-stats {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.mission-stats .stat {
+    padding: 4rem 2rem;
     background: #F7F1EC;
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mission-stats .stat h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #1A1A47;
-}
-
-.mission-stats .stat p {
-    font-size: 0.9rem;
-    color: #2E2651;
-}
-
-.team-section {
-    padding: 50px 20px;
+.mission-header {
     text-align: center;
-    background-color: #F7F1EC;
+    max-width: 800px;
+    margin: 0 auto 3rem;
 }
 
-.team-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #1A1A47;
+.decorative-line {
+    width: 100px;
+    height: 3px;
+    background: #8692E9;
+    margin: 1.5rem auto;
 }
 
-.team-section p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #2E2651;
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.team-members {
+.mission-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(26, 26, 71, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.stats-section {
+    padding: 4rem 2rem;
+    background: #2E2651;
+    color: #F7F1EC;
+}
+
+.stats-container {
     display: flex;
     justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-section {
+    padding: 4rem 2rem;
+    background: #F7F1EC;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-date {
+    width: 120px;
+    font-weight: bold;
+    color: #662163;
+}
+
+.timeline-content {
+    padding-left: 2rem;
+    border-left: 3px solid #8692E9;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    background: #1A1A47;
+    border-radius: 50%;
+}
+
+.team-preview {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .team-member {
-    background: #F7F1EC;
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .team-member img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
-.team-member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #1A1A47;
+.team-member:hover img {
+    transform: scale(1.05);
 }
 
-.team-member p {
-    font-size: 0.9rem;
-    color: #2E2651;
+.social-links {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    transition: bottom 0.3s ease;
+}
+
+.team-member:hover .social-links {
+    bottom: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #E855B4;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .mission-grid,
+    .stats-container,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-date {
+        margin-bottom: 1rem;
+    }
 }
