@@ -13,6 +13,9 @@ Brilliant Rose: #E855B4 */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-right {
@@ -81,6 +84,10 @@ Brilliant Rose: #E855B4 */
 
 .login-btn:hover, .admin-btn:hover {
     transform: translateY(-2px);
+}
+
+.about-hero {
+    margin-top: 0;
 }
 
 .hero {
@@ -469,19 +476,112 @@ Brilliant Rose: #E855B4 */
     color: #E855B4;
     text-decoration: none;
 }
+}
+/* Events Page Styles */
+.events-hero {
+    background: linear-gradient(rgba(26, 26, 71, 0.9), rgba(46, 38, 81, 0.8)),
+                url('events-bg.jpg') center/cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #F7F1EC;
+    padding: 2rem;
+}
+
+.event-categories {
+    padding: 3rem 2rem;
+    background: #F7F1EC;
+}
+
+.event-categories h2 {
+    text-align: center;
+    color: #2E2651;
+    margin-bottom: 2rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: #662163;
+    box-shadow: 0 3px 10px rgba(26, 26, 71, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+}
+
+.featured-events {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-events h2 {
+    color: #1A1A47;
+    margin-bottom: 2rem;
+}
+
+.event-listings {
+    display: grid;
+    gap: 2rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(26, 26, 71, 0.1);
+    display: flex;
+}
+
+.event-image {
+    width: 40%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 1.5rem;
+    width: 60%;
+}
+
+.event-price {
+    color: #E855B4;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
 
 @media (max-width: 768px) {
-    .mission-grid,
-    .stats-container,
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline-item {
+    .event-card {
         flex-direction: column;
     }
 
-    .timeline-date {
-        margin-bottom: 1rem;
+    .event-image,
+    .event-details {
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
