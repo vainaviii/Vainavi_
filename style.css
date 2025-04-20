@@ -585,3 +585,83 @@ Brilliant Rose: #E855B4 */
         grid-template-columns: 1fr 1fr;
     }
 }
+.team-hero {
+    background: linear-gradient(rgba(26, 26, 71, 0.9), rgba(46, 38, 81, 0.8)),
+                url('team-bg.jpg') center/cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #F7F1EC;
+    padding: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(26, 26, 71, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-info h3 {
+    color: #1A1A47;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    color: #662163;
+    font-size: 0.9rem;
+}
+
+.member-emoji {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.team-message {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+blockquote {
+    color: #2E2651;
+    font-style: italic;
+    border-left: 4px solid #8692E9;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-emoji {
+        margin: 1rem 0 0;
+    }
+}
