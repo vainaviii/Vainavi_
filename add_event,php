@@ -1,0 +1,21 @@
+<?php
+session_start();
+include 'config.php';
+
+// Sanitize inputs (basic example)
+$title = htmlspecialchars($_POST['title']);
+$date = $_POST['date'];
+$location = htmlspecialchars($_POST['location']);
+$category = htmlspecialchars($_POST['category']);
+$description = htmlspecialchars($_POST['description']);
+$price = $_POST['price'];
+
+// Insert into database using prepared statements
+$sql = "INSERT INTO events (title, date, location, category, description, price)
+        VALUES (?, ?, ?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sssssd", $title, $date, $location, $category, $description, $price);
+$stmt->execute();
+
+header("Location: admin_dashboard.php"); // Redirect back to dashboard
+?>
