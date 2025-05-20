@@ -2,17 +2,15 @@
 session_start();
 include 'config.php';
 
-// Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit();
 }
 
-// Fetch event to edit
 $event_id = $_GET['id'];
 $sql = "SELECT * FROM events WHERE id = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $event_id); // "i" = integer type
+$stmt->bind_param("i", $event_id);
 $stmt->execute();
 $event = $stmt->get_result()->fetch_assoc();
 ?>
