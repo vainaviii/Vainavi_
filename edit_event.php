@@ -1,18 +1,9 @@
 <?php
 session_start();
-include 'config.php';
-
 if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit();
 }
-
-$event_id = $_GET['id'];
-$sql = "SELECT * FROM events WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $event_id);
-$stmt->execute();
-$event = $stmt->get_result()->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html>

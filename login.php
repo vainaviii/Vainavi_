@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start PHP session to track logged-in users
+session_start();
 ?>
 <!DOCTYPE html>
 <html>

@@ -8,15 +8,13 @@ include 'php/config.php';
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation (copy from your existing navbar) -->
+
 
     <div class="container">
         <h1>Upcoming Events</h1>
 
-        <!-- Search Bar -->
         <input type="text" id="search" placeholder="Search events...">
 
-        <!-- Event List -->
         <div class="event-grid" id="event-container">
             <?php
             $result = $conn->query("SELECT * FROM events");
@@ -32,7 +30,7 @@ include 'php/config.php';
     </div>
 
     <script>
-    // AJAX Search
+
     document.getElementById('search').addEventListener('input', function(e) {
         fetch(`php/search.php?query=${e.target.value}`)
             .then(response => response.json())
